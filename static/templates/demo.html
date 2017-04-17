@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JAB Demo</title>
+</head>
+<body ng-controller="AppCtrl">
+
+ <div layout="column" flex id="content" class="md-body-2">
+      <h2 class="md-flex">Best Buy Search Tool</h2>
+     <p>Begin to type the name of product you would like to view. </p>
+     <md-autocomplete md-selected-item-change="selectedItemChange(item)"
+                             md-search-text="searchText"
+                             md-items="item in query(searchText)">
+  <md-item-template>
+    <span md-highlight-text="searchText">{{item.name}}</span>
+  </md-item-template>
+</md-autocomplete>
+            </div>
+</body>
+</html>

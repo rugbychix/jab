@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jam
+  labels:
+    name: jam
+spec:
+  containers:
+    - image: jam:current
+      name: jam
+      ports:
+        - containerPort: 80
+          name: jam
+    
